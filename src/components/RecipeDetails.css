@@ -1,0 +1,12 @@
+.recipe-details {
+  display: flex
+}
+
+.recipe-details img{
+  padding: 20px;
+}
+
+.recipe-details-title{
+  font-size: larger;
+  font-weight: 600;
+}

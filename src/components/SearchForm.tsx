@@ -10,10 +10,10 @@ const SearchForm = ({ searchHandler }: ISearchForm) => {
     setCocktailName(value)
   }
   return (
-    <>
-      <input type="text" value={cocktailName} onChange={e => cocktailNameHandler(e.target.value)} />
+    <div style={{ padding: "20px" }}>
+      <input type="text" value={cocktailName} onChange={e => cocktailNameHandler(e.target.value)} />{" "}
       <button onClick={() => searchHandler(cocktailName)}>Search</button>
-    </>
+    </div>
   )
 }
 

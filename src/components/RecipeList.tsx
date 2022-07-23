@@ -7,16 +7,16 @@ interface IRecipeList {
 
 const RecipeList = ({ loading, recipes }: IRecipeList) => {
   return (
-    <>
+    <div>
       {
-        loading ? <div>Loading...</div> : <div>
+        loading ? <p style={{ padding: "20px" }}>Loading...</p> : <div>
           {
             recipes.map(rec => <RecipeDetails key={rec?.idDrink} details={rec}></RecipeDetails>)
           }
         </div>
       }
 
-    </>
+    </div>
 
   )
 }

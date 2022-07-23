@@ -1,3 +1,5 @@
+import "./RecipeDetails.css"
+
 const RecipeDetails = ({ details }: any) => {
   const getIngredients = (): Array<string> => {
     const allingredients: Array<string> = []
@@ -12,11 +14,13 @@ const RecipeDetails = ({ details }: any) => {
   return (
     <div className="recipe-details">
       <img src={`${details.strDrinkThumb}/preview`} />
-      <p>{details.strDrink}</p>
-      <p>{details.strInstructions}</p>
-      <ul>
-        {getIngredients().map((ingredient, index) => <li key={ingredient + index}>{ingredient}</li>)}
-      </ul>
+      <div>
+        <p className="recipe-details-title">{details.strDrink}</p>
+        <p>{details.strInstructions}</p>
+        <ul>
+          {getIngredients().map((ingredient, index) => <li key={ingredient + index}>{ingredient}</li>)}
+        </ul>
+      </div>
     </div>
   )
 }

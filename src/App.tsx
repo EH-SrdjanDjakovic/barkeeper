@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import SearchForm from './components/SearchForm';
 import RecipeList from './components/RecipeList';
 import getRecipes from "./api/getRecipes"
