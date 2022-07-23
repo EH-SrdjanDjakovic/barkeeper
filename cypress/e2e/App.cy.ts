@@ -8,7 +8,7 @@ describe('<App>', () => {
     cy.get('button').contains("Search").should("be.visible")
   })
 
-  it('should fetch data from api', () => {
+  it('should fetch data from api successfully', () => {
     const cocktailName: string = "sun"
     cy.get('input').type(cocktailName)
     cy.get('button').click()
@@ -17,5 +17,11 @@ describe('<App>', () => {
         expect(res.body.drinks.length).to.be.gt(0)
       })
     })
+  })
+
+  it('should display recipe details', () => {
+    cy.get('input').type("sour")
+    cy.get('button').click()
+    cy.get(".recipe-details").should("have.length.greaterThan", 0)
   })
 })
