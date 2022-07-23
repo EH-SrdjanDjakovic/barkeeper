@@ -11,7 +11,7 @@ const RecipeList = ({ loading, recipes }: IRecipeList) => {
       {
         loading ? <div>Loading...</div> : <div>
           {
-            recipes.map(rec => <RecipeDetails key={rec?.idDrink}></RecipeDetails>)
+            recipes.map(rec => <RecipeDetails key={rec?.idDrink} details={rec}></RecipeDetails>)
           }
         </div>
       }
