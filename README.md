@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Barkeeper's recipes ![check-code-coverage](https://img.shields.io/badge/code--coverage-100%25-brightgreen)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -18,6 +18,11 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before running tests run npm start command in order to instrument the code
+
+### `npx update-badge`
+
+Updates the code-coverage badge. Once the testing is done, run this command to update the badge.
 
 ### `npm run build`
 
