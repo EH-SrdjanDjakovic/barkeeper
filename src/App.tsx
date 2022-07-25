@@ -14,15 +14,20 @@ function App() {
       data = await getRecipes(cocktailName)
       setRecipes(data.drinks)
       setSearchInProgress(false)
+      setError("")
     } catch (err) {
-      setError(err as string)
+      setError("Something went wrong. Try again later.")
+      setRecipes([])
       setSearchInProgress(false)
     }
   }
+
   return (
     <div className="App">
       <SearchForm searchHandler={searchHandler} />
-      <RecipeList recipes={recipes} loading={searchInProgress} />
+      {
+        error ? <div style={{ paddingLeft: "20px" }}>{error}</div> : <RecipeList recipes={recipes} loading={searchInProgress} />
+      }
     </div>
   );
 }

@@ -11,7 +11,8 @@ const RecipeList = ({ loading, recipes }: IRecipeList) => {
       {
         loading ? <p style={{ padding: "20px" }}>Loading...</p> : <div>
           {
-            recipes.map(rec => <RecipeDetails key={rec?.idDrink} details={rec}></RecipeDetails>)
+            recipes ? recipes.map(rec => <RecipeDetails key={rec?.idDrink} details={rec}></RecipeDetails>) :
+              <div style={{ paddingLeft: "20px" }}>Cocktail not found.</div>
           }
         </div>
       }
