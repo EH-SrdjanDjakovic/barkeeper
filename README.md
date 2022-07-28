@@ -20,6 +20,9 @@ Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 Before running tests run npm start command in order to instrument the code
 
+### `npm test-headless`
+Runs tests in headless mode.
+
 ### `npx update-badge`
 
 Updates the code-coverage badge. Once the testing is done, run this command to update the badge.
