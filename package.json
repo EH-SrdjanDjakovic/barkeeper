@@ -16,6 +16,7 @@
     "start": "react-scripts -r @cypress/instrument-cra start",
     "build": "react-scripts build",
     "test": "cypress open",
+    "test-headless": "cypress run",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
